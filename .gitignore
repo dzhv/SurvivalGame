@@ -1,3 +1,8 @@
+.DS_Store
+*.meta
+*.sln
+Temp/*
+obj/*
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
