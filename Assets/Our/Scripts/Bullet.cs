@@ -10,11 +10,12 @@ public class Bullet : MonoBehaviour {
 		Destroy(gameObject, Lifetime);
 	}
 
-	void OnCollisionEnter2D(Collision2D collision){
-		Debug.Log ("Guten tag i'm collision");
+	void OnCollisionEnter2D(Collision2D collision){		
 		var health = collision.collider.GetComponent<Health>();
 		if (health != null) {
 			health.TakeDamage(1);
 		}
+
+		Destroy(gameObject);
 	}
 }

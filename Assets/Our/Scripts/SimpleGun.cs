@@ -22,8 +22,8 @@ public class SimpleGun : MonoBehaviour
 		var mouseWorldPosition = Camera.main.ScreenToWorldPoint(
 			Input.mousePosition);
 
-		var direction = (new Vector3(mouseWorldPosition.x, mouseWorldPosition.y, 0) - 
-			new Vector3(transform.position.x, transform.position.y, 0)).normalized;	
-		bulletBody.AddForce(direction * Speed);
+		var direction = (new Vector2(mouseWorldPosition.x, mouseWorldPosition.y) - 
+			new Vector2(transform.position.x, transform.position.y)).normalized;	
+		bulletBody.velocity = direction * Speed;
 	}
 }
